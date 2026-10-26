@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nilabja Ghosh, Data Scientist</title>
+<meta name="description" content="Nilabja Ghosh is a data scientist at EY India working on demand forecasting and quantitative research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#eef2f6;--surface:#f8fafc;--ink:#18212f;--muted:#566275;--line:#cfd8e3;--accent:#2f5bea;--band:rgba(47,91,234,.14);--warm:#c77d00;
+--head:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a26;--surface:#192233;--ink:#e8edf5;--muted:#9aa7bb;--line:#2b384d;--accent:#7d9cff;--band:rgba(125,156,255,.18);--warm:#f0b648;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121a26;--surface:#192233;--ink:#e8edf5;--muted:#9aa7bb;--line:#2b384d;--accent:#7d9cff;--band:rgba(125,156,255,.18);--warm:#f0b648;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;align-items:center;padding:22px 0}
+.nav b{font:700 19px var(--head)}
+.nav nav{display:flex;gap:20px;flex-wrap:wrap}
+.nav nav a{color:var(--muted);text-decoration:none;font-size:15px}
+.nav nav a:hover{color:var(--ink)}
+/* .hero{padding:40px 0 24px}
+h1{font:700 clamp(2.3rem,6.2vw,4.3rem)/1.04 var(--head);letter-spacing:-.025em;margin:0 0 20px;max-width:15em} */
+.hero{
+  padding:55px 0 30px;
+}
+
+h1{
+  font:600 clamp(2.2rem,5vw,3.8rem)/1.08 var(--head);
+  letter-spacing:-0.025em;
+  max-width:950px;
+}
+.lede{max-width:40em;color:var(--muted);font-size:1.1rem;margin:0 0 28px}
+.lede strong{color:var(--ink);font-weight:600}
+.chartbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px}
+.chartbox h2{font:600 15px var(--body);margin:0 0 2px}
+.chartbox p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chips button{font:500 14px var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13.5px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+#readout{font-size:14px;color:var(--ink);margin-top:8px;min-height:1.6em}
+section{padding:64px 0 8px}
+h2.s{font:700 clamp(1.7rem,3.5vw,2.4rem)/1.15 var(--head);letter-spacing:-.015em;margin:0 0 28px}
+.job{display:grid;grid-template-columns:170px 1fr;gap:6px 36px;padding:26px 0;border-top:1px solid var(--line)}
+.job .when{color:var(--muted);font-size:15px}
+.job h3{font:700 1.3rem var(--head);margin:0}
+.job .role{color:var(--muted);margin:0 0 10px}
+.job ul{margin:0;padding-left:1.1em}
+.job li{margin-bottom:8px;max-width:44em}
+.proj{display:grid;grid-template-columns:1fr 190px;gap:8px 36px;padding:26px 0;border-top:1px solid var(--line)}
+.proj h3{font:700 1.15rem/1.3 var(--head);margin:0 0 4px}
+.proj .when{color:var(--muted);font-size:14.5px;margin:0 0 8px}
+.proj p{margin:0 0 8px;max-width:42em}
+.big{font:700 2.6rem/1 var(--head);color:var(--accent);text-align:right}
+.big small{display:block;font:400 13.5px/1.4 var(--body);color:var(--muted);margin-top:6px}
+.pub{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.pub h3{font:700 1.2rem var(--head);margin:0 0 6px}
+.pub p{margin:0 0 6px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.skills h3{font:700 1.05rem var(--head);margin:0 0 8px}
+.skills p{margin:0;color:var(--muted)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
+.edu div{margin-bottom:16px}
+.edu b{display:block}
+.edu span{color:var(--muted);font-size:15px}
+.contact{background:var(--ink);color:var(--bg);border-radius:18px;padding:40px 32px;margin:64px 0 40px}
+.contact h2{font:700 clamp(1.7rem,4vw,2.6rem)/1.1 var(--head);margin:0 0 12px}
+.contact p{margin:0 0 20px;max-width:34em;opacity:.85}
+.contact a{color:var(--bg);font-weight:600;margin-right:22px}
+.contact .mail{display:inline-block;background:var(--bg);color:var(--ink);padding:11px 20px;border-radius:999px;text-decoration:none;margin-bottom:12px}
+footer{padding:0 0 32px;color:var(--muted);font-size:14px}
+/* About section and circular profile photo */
+.about{display:grid;grid-template-columns:220px minmax(0,1fr);gap:36px;align-items:start}
+.photo{width:220px;height:220px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--line);background:var(--surface)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.about-content{min-width:0}
+.about p{margin:0 0 14px;max-width:40em}
+.btn{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:9px 18px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+.mailrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:16px}
+.contact .mailrow .mail{margin:0}
+.copy{font:600 14px var(--body);color:var(--bg);background:transparent;border:1px solid var(--bg);border-radius:999px;padding:10px 16px;cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.12)}
+@media (max-width:680px){.job,.proj{grid-template-columns:1fr}.big{text-align:left}.wrap{padding:0 18px}.about{grid-template-columns:1fr;justify-items:center;gap:24px}.photo{width:200px;height:200px}.about-content{width:100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav" id="top">
+  <b>Nilabja Ghosh</b>
+  <nav aria-label="Sections"><a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="https://ghoshnilabja.github.io/Nilabja_Ghosh_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1>I build models that predict demand, financial trends, and what comes next.</h1>
+  <p class="lede">Data scientist at <strong>EY India</strong>.</p>
+   <!-- I build demand forecasts for a major FMCG client, and before that I researched options volatility and trading strategies. I also publish NLP research on hate speech. -->
+
+  <div class="chartbox">
+    <h2>Pick a model and see how it reads the next 16 weeks</h2>
+    <p>Illustrative data. Sales have a spike at every month-end, and each model handles it differently.</p>
+    <div class="chips" role="group" aria-label="Forecasting model">
+      <button type="button" data-m="0" aria-pressed="true">Lasso</button>
+      <button type="button" data-m="1" aria-pressed="false">Random Forest</button>
+      <button type="button" data-m="2" aria-pressed="false">XGBoost</button>
+      <button type="button" data-m="3" aria-pressed="false">LightGBM</button>
+      <button type="button" data-m="4" aria-pressed="false">TimeGPT</button>
+    </div>
+    <svg id="chart" viewBox="0 0 720 280" role="img" aria-label="Line chart of actual sales followed by a forecast with a widening confidence band"></svg>
+    <div class="legend"><span><i style="background:var(--ink)"></i>Actual sales</span><span><i style="background:var(--accent)"></i>Forecast</span><span><i style="background:var(--band);height:10px"></i>Uncertainty range</span><span><i style="background:var(--warm)"></i>Month-end spike</span></div>
+    <div id="readout" aria-live="polite"></div>
+  </div>
+</div>
+
+<section id="about">
+  <h2 class="s">About me</h2>
+  <div class="about">
+    <div class="photo">
+      <img src="profile_photo1.png" alt="Nilabja Ghosh">
+    </div>
+    <div class="about-content">
+      <p>I’m a data scientist based in Kolkata. I studied Physics at St. Xavier’s College, Kolkata and Big Data Analytics at RKMVERI, and I now build demand forecasting systems at EY India.</p>
+      <p>Before that, I worked in quantitative research, where I modeled implied volatility and developed options trading and hedging strategies. I also have hands-on experience with LLMs, including fine-tuning models to solve domain-specific problems.</p>
+      <p>Outside of work, I’m usually on a court or a field—playing football, badminton, or table tennis. So if you ever need an extra player to fill a spot, feel free to hit me up!</p>
+      <a class="btn" href="https://ghoshnilabja.github.io/Nilabja_Ghosh_Resume.pdf" target="_blank" rel="noopener noreferrer">Check out my resume</a>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2 class="s">Where I’ve worked</h2>
+  <div class="job">
+    <div class="when">May 2025 to now<br>Kolkata</div>
+    <div>
+      <h3>Ernst &amp; Young LLP (EY India)</h3>
+      <p class="role">Consultant, Data Scientist</p>
+      <ul>
+        <li>Led a Market Build engagement for a major FMCG client. I built category-wise demand forecasting in PySpark with Lasso, XGBoost, Random Forest, LightGBM and TimeGPT.</li>
+        <li>Designed a two-stage framework for intermittent demand, plus hierarchical forecasting and disaggregation, so forecasts land at the granular key level planners need.</li>
+        <li>Worked with demand planners to engineer month-end sales-spike features. Forecast accuracy rose 5% and bias fell 2% across all business categories.</li>
+        <li>Ran root cause analysis in PySpark on large sales, market-trend, seasonal and holiday datasets to find and fix model weak spots.</li>
+        <li>Won the “Client Extraordinary” award twice.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="job">
+    <div class="when">Jul 2023 to Apr 2025<br>Kolkata</div>
+    <div>
+      <h3>Feedsense AI Pvt. Ltd.</h3>
+      <p class="role">Quantitative Research Executive (earlier Vista Intelligence)</p>
+      <ul>
+        <li>Researched Black-Scholes and Heston models to extract and predict implied volatility, and used them to design an options trading strategy for the BankNifty index.</li>
+        <li>Built an investment and hedging strategy for Axis Bank. It averaged 43% annual return, beat the market by 93% over five years and cut drawdown by 14%.</li>
+        <li>Built a real-time video transcription pipeline with OpenAI Whisper and Ollama-3.2 for sentiment analysis of news, with 65% directional accuracy.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="s">Projects</h2>
+  <div class="proj">
+    <div>
+      <h3>Explaining toxic text in Indian languages</h3>
+      <p class="when">IIT Patna, Dept. of Computer Science and Engineering, May to Dec 2022</p>
+      <p>Studied knowledge graphs and knowledge bases to understand toxic text. Used mBART to generate the stereotype and target group from a Hindi post.</p>
+    </div>
+    <div class="big">mBART<small>Hindi post in, stereotype and target group out</small></div>
+  </div>
+  <div class="proj">
+    <div>
+      <h3>Image classification with self-supervised learning</h3>
+      <p class="when">May to Jul 2022</p>
+      <p>Sampled 10% of CIFAR-10 with balanced sampling, extracted features with Barlow Twins on ResNet-50, and classified with logistic regression.</p>
+    </div>
+    <div class="big">65%<small>accuracy, against 15% for supervised learning on the same samples</small></div>
+  </div>
+  <div class="proj">
+    <div>
+      <h3>Malaria detection from blood smears</h3>
+      <p class="when">May to Jul 2022</p>
+      <p>Compared SGD with momentum, Adam, Adagrad and RMSProp on a 3-layer CNN. Adam reached 95.84% and Adagrad 95.62%.</p>
+    </div>
+    <div class="big">96.11%<small>test accuracy with SGD and momentum</small></div>
+  </div>
+</section>
+
+<section id="research">
+  <h2 class="s">Research</h2>
+  <div class="pub">
+    <h3>StereoHate: Toward identifying stereotypical bias and target group in hate speech detection</h3>
+    <p>Published in Natural Language Processing (Cambridge University Press).</p>
+    <a href="https://doi.org/10.1017/nlp.2024.29">Read the paper (DOI 10.1017/nlp.2024.29)</a>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="s">Skills and credentials</h2>
+  <div class="skills">
+    <div><h3>Languages</h3><p>Python, SQL (MySQL, PostgreSQL), R</p></div>
+    <div><h3>Libraries</h3><p>NumPy, Pandas, PyTorch, PySpark, Matplotlib, LangChain</p></div>
+    <div><h3>Forecasting</h3><p>Lasso, Random Forest, XGBoost, LightGBM, TimeGPT, intermittent and hierarchical demand</p></div>
+    <div><h3>Quant and NLP</h3><p>Black-Scholes, Heston, implied volatility, Whisper, Transformers</p></div>
+    <div><h3>Certified</h3><p>SEBI NISM Series XV, Research Analyst</p></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="s">Education and awards</h2>
+  <div class="edu">
+    <div>
+      <div><b>M.Sc. in Big Data Analytics, 2023</b><span>RKMVERI, CGPA 7.18/10</span></div>
+      <div><b>B.Sc. in Physics (Hons.), 2021</b><span>St. Xavier’s College, Kolkata, CGPA 7.5/10</span></div>
+      <div><b>Class XII, ISC, 2018</b><span>Holy Child School, 91.75%</span></div>
+      <div><b>Class X, ICSE, 2016</b><span>Holy Child School, 92.8%</span></div>
+    </div>
+    <div>
+      <div><b>Client Extraordinary award, twice</b><span>EY, for client value and trusted advisory work</span></div>
+      <div><b>Runners-up, All-in Champions League</b><span>Football tournament organised by EY India</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <h2>Working on a forecasting or research problem?</h2>
+  <p>Write to me with what you’re trying to predict and I’ll tell you how I’d approach it.</p>
+  <div class="mailrow"><a class="mail" href="mailto:nilabjaghosh2001@gmail.com">nilabjaghosh2001@gmail.com</a><button type="button" class="copy" id="copy" aria-live="polite">Copy email</button></div>
+  <a href="https://github.com/ghoshnilabja">GitHub</a><a href="https://www.linkedin.com/in/ghoshnilabja">LinkedIn</a><a href="https://ghoshnilabja.github.io/Nilabja_Ghosh_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+</div>
+</main>
+<footer>Nilabja Ghosh, Kolkata</footer>
+</div>
+
+<script>
+(function(){
+  var W=720,H=280,L=36,R=14,T=16,B=26,NA=44,NF=16,N=NA+NF;
+  var svg=document.getElementById('chart'),ro=document.getElementById('readout');
+  var models=[
+    {n:'Lasso',s:.35,b:-3,note:'Lasso smooths the spikes, so it tracks the trend well but under-forecasts month-ends.'},
+    {n:'Random Forest',s:.6,b:-1,note:'Random Forest picks up most of the month-end pattern but flattens the peaks.'},
+    {n:'XGBoost',s:.9,b:0,note:'XGBoost catches the month-end spikes closely, helped by the engineered spike features.'},
+    {n:'LightGBM',s:.8,b:1,note:'LightGBM lands close to XGBoost on spikes and runs quickly on large key-level data.'},
+    {n:'TimeGPT',s:1,b:2.5,note:'TimeGPT follows the seasonal rhythm with no feature work, with a slightly optimistic drift.'}
+  ];
+  function base(t){return 100+.7*t+9*Math.sin(t/5.2);}
+  function spike(t){return (t%4===3)?15:0;}
+  function noise(t){var x=Math.sin(t*12.9898)*43758.5453;return (x-Math.floor(x)-.5)*7;}
+  var all=[];for(var t=0;t<N;t++)all.push(base(t)+spike(t)+10);
+  var mn=90,mx=Math.max.apply(null,all)+22;
+  function X(i){return L+i*(W-L-R)/(N-1);}
+  function Y(v){return T+(1-(v-mn)/(mx-mn))*(H-T-B);}
+  function path(pts){return pts.map(function(p,i){return(i?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);}).join('');}
+  function draw(k){
+    var m=models[k],s='',i,t;
+    for(i=0;i<=4;i++){var v=mn+(mx-mn)*i/4,y=Y(v);s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="var(--line)" stroke-width="1"/>';}
+    var act=[];for(t=0;t<NA;t++)act.push([t,base(t)+spike(t)+10+noise(t)]);
+    var fc=[],up=[],lo=[];
+    for(t=NA-1;t<N;t++){var h=t-(NA-1),f=base(t)+10+m.s*spike(t)+m.b*Math.min(h,6)/6,w=3+h*1.25;fc.push([t,f]);up.push([t,f+w]);lo.push([t,f-w]);}
+    var band=path(up)+lo.slice().reverse().map(function(p){return'L'+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);}).join('')+'Z';
+    s+='<line x1="'+X(NA-1)+'" x2="'+X(NA-1)+'" y1="'+T+'" y2="'+(H-B)+'" stroke="var(--muted)" stroke-dasharray="3 4"/>';
+    s+='<text x="'+(X(NA-1)-6)+'" y="'+(T+12)+'" text-anchor="end" font-size="12" fill="var(--muted)">history</text><text x="'+(X(NA-1)+6)+'" y="'+(T+12)+'" font-size="12" fill="var(--muted)">forecast</text>';
+    s+='<path d="'+band+'" fill="var(--band)"/>';
+    s+='<path d="'+path(act)+'" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>';
+    act.forEach(function(p){if(p[0]%4===3)s+='<circle cx="'+X(p[0]).toFixed(1)+'" cy="'+Y(p[1]).toFixed(1)+'" r="3.6" fill="var(--warm)"/>';});
+    s+='<path id="fp" d="'+path(fc)+'" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linejoin="round"/>';
+    fc.forEach(function(p){if(p[0]%4===3)s+='<circle cx="'+X(p[0]).toFixed(1)+'" cy="'+Y(p[1]).toFixed(1)+'" r="3.6" fill="var(--warm)"/>';});
+    s+='<text x="'+L+'" y="'+(H-6)+'" font-size="12" fill="var(--muted)">past 44 weeks</text><text x="'+(W-R)+'" y="'+(H-6)+'" text-anchor="end" font-size="12" fill="var(--muted)">next 16 weeks</text>';
+    svg.innerHTML=s;
+    ro.textContent=m.note;
+    var fp=document.getElementById('fp');
+    if(fp&&fp.getTotalLength&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+      var len=fp.getTotalLength();fp.style.strokeDasharray=len;fp.style.strokeDashoffset=len;
+      fp.getBoundingClientRect();fp.style.transition='stroke-dashoffset .9s ease';fp.style.strokeDashoffset=0;
+    }
+  }
+  var btns=document.querySelectorAll('.chips button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    draw(+b.dataset.m);
+  });});
+  draw(0);
+  var cb=document.getElementById('copy'),email='nilabjaghosh2001@gmail.com';
+  function done(){cb.textContent='Copied';setTimeout(function(){cb.textContent='Copy email';},2000);}
+  function fallback(){var t=document.createElement('textarea');t.value=email;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){cb.textContent='Press Ctrl+C';}document.body.removeChild(t);}
+  cb.addEventListener('click',function(){
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(done,fallback);}else{fallback();}
+  });
+})();
+</script>
+</body>
+</html>
