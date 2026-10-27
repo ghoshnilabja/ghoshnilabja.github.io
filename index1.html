@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Nilabja Ghosh is a data scientist at EY with a background in physics, quantitative research, and applied AI. Explore his experience, projects, research, and interests.">
+<meta name="theme-color" content="#f8f8f6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nilabja Ghosh | Data Scientist & Researcher">
+<meta property="og:description" content="Data science, quantitative research, applied AI, and the curiosity behind it all.">
+<title>Nilabja Ghosh | Data Scientist & Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;350;400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+<style>
+/* Minimal, editorial portfolio inspired by the supplied Wix Researcher CV reference.
+   Self-contained HTML/CSS/JS, compatible with static hosting/GitHub Pages. */
+:root {
+  --bg:#f8f8f6;
+  --panel:#ffffff;
+  --panel-soft:#f1f0ef;
+  --text:#3b3b3d;
+  --secondary:#56575a;
+  --muted:#77777b;
+  --line:#d6d6d4;
+  --strong-line:#424244;
+  --accent:#6445a3;
+  --accent-soft:#eee7f4;
+  --banner:#e6dfed;
+  --banner-ink:#1a1720;
+  --banner-caption:#665976;
+  --inverse:#19191b;
+  --inverse-ink:#ffffff;
+  --shadow:0 16px 40px rgba(0,0,0,.045);
+  --display:'Inter','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter','Helvetica Neue',Arial,sans-serif;
+  color-scheme:light;
+}
+:root[data-theme="dark"] {
+  --bg:#121315;
+  --panel:#1b1c20;
+  --panel-soft:#202126;
+  --text:#f0efed;
+  --secondary:#b5b4bb;
+  --muted:#93929b;
+  --line:#3b3c43;
+  --strong-line:#dcdadd;
+  --accent:#d0b6fa;
+  --accent-soft:#2e293b;
+  --banner:#282536;
+  --banner-ink:#f6f1fb;
+  --banner-caption:#c9bfd8;
+  --inverse:#eeeef0;
+  --inverse-ink:#171719;
+  --shadow:0 16px 50px rgba(0,0,0,.16);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15.5px/1.72 var(--body);letter-spacing:-.012em;-webkit-font-smoothing:antialiased;transition:background .23s ease,color .23s ease}
+a{color:inherit;text-underline-offset:4px}a:hover{color:var(--accent)}
+button{font:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+::selection{color:var(--bg);background:var(--accent)}
+.wrap{width:min(1272px,calc(100% - 104px));margin-inline:auto}
+.skip{position:absolute;left:14px;top:-80px;background:var(--inverse);color:var(--inverse-ink);padding:12px;z-index:100}.skip:focus{top:10px}
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);transition:background .23s ease}
+.header-inner{height:78px;display:flex;justify-content:space-between;align-items:center;gap:26px}
+.wordmark{display:flex;align-items:center;gap:14px;color:var(--text);text-decoration:none;white-space:nowrap}
+.monogram{width:37px;height:37px;display:grid;place-items:center;font:600 16px/.9 var(--display);letter-spacing:-.045em;background:var(--text);color:var(--bg)}
+.wordmark-name{font:550 15px/1.25 var(--display);letter-spacing:-.03em}
+.wordmark-role{display:block;font:450 10.5px/1.3 var(--body);color:var(--muted);margin-top:2px;letter-spacing:.015em}
+.nav-cluster{display:flex;align-items:center;gap:25px}
+.nav-links{display:flex;align-items:center;gap:clamp(15px,1.8vw,30px)}
+.nav-links>a{text-decoration:none;white-space:nowrap;font-size:12px;font-weight:550;transition:color .15s}
+.nav-links>a:hover,.nav-links>a.active{color:var(--accent)}
+.nav-links .resume-link{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--text);padding-bottom:3px}
+.icon-button{width:37px;height:37px;display:grid;place-items:center;color:var(--text);border:1px solid var(--line);background:transparent;cursor:pointer;transition:background .2s,border-color .2s}
+.icon-button:hover{border-color:var(--text);background:var(--panel)}
+.icon-button svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-linejoin:round;stroke-linecap:round;stroke-width:1.7}
+#menuToggle{display:none}
+/* Masthead and editorial hero */
+.hero{padding-top:51px}
+.hero-kicker{display:flex;justify-content:space-between;gap:14px;align-items:center;font-size:11px;font-weight:550;letter-spacing:.075em;text-transform:uppercase;margin:0 0 18px}
+.hero-kicker span:last-child{color:var(--muted)}
+/* Light, generously spaced editorial typography inspired by the supplied reference. */
+.masthead{border-top:1px solid var(--strong-line);border-bottom:1px solid var(--strong-line);padding:21px 0 25px}
+.masthead h1{margin:0;font:400 clamp(68px,7.9vw,116px)/1.075 var(--display);letter-spacing:-.065em;text-transform:none;white-space:normal}
+.masthead h1 span{display:block;width:max-content;max-width:100%}
+.hero-subline{display:flex;justify-content:space-between;gap:32px;align-items:center;padding:15px 0 31px}
+.hero-subline p{margin:0;font-size:12.5px;font-weight:500;letter-spacing:.015em}
+.hero-subline p:last-child{color:var(--secondary);font-weight:400;letter-spacing:-.012em}
+.hero-visual{background:var(--banner);min-height:440px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);position:relative;overflow:hidden;isolation:isolate}
+.hero-visual::before{content:"";position:absolute;inset:0;z-index:-1;background:
+ radial-gradient(ellipse at 76% 52%,rgba(164,135,215,.30),transparent 59%),
+ linear-gradient(110deg,rgba(255,255,255,.29),transparent 62%)}
+:root[data-theme="dark"] .hero-visual::before{background:radial-gradient(ellipse at 78% 42%,rgba(136,100,195,.24),transparent 59%)}
+.pattern{position:absolute;right:-7%;top:-23%;width:69%;height:145%;z-index:-1;opacity:.73;
+ background-image:linear-gradient(to right,rgba(153,112,186,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(153,112,186,.17) 1px,transparent 1px);
+ background-size:32px 32px;mask-image:radial-gradient(ellipse at 50% 50%,black 8%,transparent 74%)}
+.pattern::after{content:"";position:absolute;inset:12%;background-image:radial-gradient(circle,rgba(131,89,181,.33) 22%,transparent 24%);background-size:23px 23px;mask-image:radial-gradient(ellipse at 55% 55%,black,transparent 65%)}
+:root[data-theme="dark"] .pattern{opacity:.55}
+.hero-content{padding:clamp(40px,5.5vw,78px);display:flex;flex-direction:column;justify-content:center;max-width:770px;position:relative;z-index:2}
+.overline{font-size:11px;font-weight:550;letter-spacing:.095em;text-transform:uppercase}
+.hero-content .overline{color:var(--banner-caption)}
+.hero-content h2{font:400 clamp(36px,4.7vw,65px)/1.14 var(--display);letter-spacing:-.057em;color:var(--banner-ink);max-width:690px;margin:17px 0 21px}
+.hero-content p{max-width:520px;color:var(--banner-caption);font-size:15.5px;line-height:1.62;margin:0 0 24px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.button{display:inline-flex;align-items:center;gap:20px;justify-content:space-between;border:1px solid var(--text);background:var(--text);color:var(--bg);padding:10px 18px;text-decoration:none;font-size:12px;font-weight:550;min-height:44px;transition:transform .2s,color .2s,background .2s}
+.button:hover{transform:translateY(-2px);background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.button.ghost{background:transparent;color:var(--banner-ink);border-color:var(--banner-ink)}
+.button.ghost:hover{background:var(--banner-ink);color:var(--banner)}
+.portrait-block{display:flex;justify-content:center;align-items:end;position:relative;padding:36px 35px 0 5px;min-width:0}
+.portrait-frame{position:relative;display:grid;place-items:center;height:min(365px,100%);width:min(320px,100%);align-self:end;overflow:hidden;background:rgba(255,255,255,.20);border:1px solid rgba(122,95,155,.35)}
+.portrait-frame::before{content:"";position:absolute;inset:18px;border:1px solid rgba(116,79,162,.18)}
+.portrait-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:2;filter:saturate(.86)}
+.photo-placeholder{font:400 clamp(120px,14vw,208px)/1 var(--display);letter-spacing:-.08em;color:rgba(91,61,139,.35);transform:translateX(-8px)}
+:root[data-theme="dark"] .photo-placeholder{color:rgba(209,187,243,.29)}
+.portrait-label{position:absolute;right:14px;top:15px;z-index:3;font:550 10px var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--banner-caption)}
+.hero-foot{display:flex;justify-content:space-between;gap:22px;padding:17px 0 0;font-size:12px;color:var(--secondary)}
+.hero-foot a{text-decoration:none;border-bottom:1px solid var(--line);font-weight:500}
+/* Section layouts */
+.section{padding:110px 0 0;scroll-margin-top:98px}
+.section-head{display:grid;grid-template-columns:minmax(175px,26%) 1fr;gap:35px;align-items:start;border-top:1px solid var(--strong-line);padding-top:27px;margin-bottom:38px}
+.section-index{font-size:11px;font-weight:550;letter-spacing:.085em;text-transform:uppercase;color:var(--secondary)}
+.section-head h2{margin:-5px 0 0;font:400 clamp(38px,4.9vw,65px)/1.16 var(--display);letter-spacing:-.061em}
+.section-intro{color:var(--secondary);font-size:15px;max-width:740px;line-height:1.8;margin:0 0 33px}
+.section-inner{margin-left:calc(26% + 35px)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(225px,.7fr);gap:clamp(30px,5vw,86px);align-items:start}
+.about-primary{font-size:19px;line-height:1.57;letter-spacing:-.03em;margin:0 0 20px}
+.about-copy p:not(.about-primary){margin:0 0 16px;color:var(--secondary);font-size:14.5px;line-height:1.72}
+.about-aside{border-left:1px solid var(--line);padding-left:27px}
+.aside-heading{font-size:11px;font-weight:550;letter-spacing:.09em;text-transform:uppercase;margin:3px 0 23px;color:var(--muted)}
+.aside-fact{padding:14px 0;border-top:1px solid var(--line)}
+.aside-fact b{display:block;font-size:13px;font-weight:550;margin-bottom:3px}
+.aside-fact span{display:block;font-size:12.5px;color:var(--secondary)}
+/* Experience as clean CV rows */
+.experience{border-top:1px solid var(--line)}
+.role-row{display:grid;grid-template-columns:minmax(150px,23%) minmax(0,1fr);gap:34px;border-bottom:1px solid var(--line);padding:29px 0 31px}
+.role-date{font-size:12px;font-weight:500;color:var(--secondary)}
+.role-date span{display:block;color:var(--muted);font-weight:500;margin-top:3px}
+.role-topline{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.role-row h3{margin:0;font:500 clamp(21px,2.8vw,30px)/1.3 var(--display);letter-spacing:-.044em}
+.role-badge{white-space:nowrap;border:1px solid var(--line);color:var(--secondary);padding:5px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:550}
+.role-company{color:var(--accent);font-size:13px;font-weight:550;margin:6px 0 14px}
+.role-row p:not(.role-company){font-size:14px;color:var(--secondary);line-height:1.75;margin:0 0 12px;max-width:770px}
+.role-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}
+.role-tags span{font-size:11px;font-weight:500;padding:5px 10px;background:var(--panel-soft);color:var(--secondary)}
+.impact-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:24px;border:1px solid var(--line)}
+.impact-strip>div{padding:18px 22px;border-right:1px solid var(--line)}.impact-strip>div:last-child{border-right:0}
+.impact-strip b{font:400 31px/1.1 var(--display);letter-spacing:-.05em;display:block;margin-bottom:7px}
+.impact-strip span{font-size:12px;line-height:1.6;color:var(--secondary);display:block}
+/* Selected projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.project{display:flex;flex-direction:column;min-height:365px;border:1px solid var(--line);background:var(--panel);transition:transform .2s,border-color .2s,box-shadow .2s}
+.project:hover{transform:translateY(-3px);border-color:var(--secondary);box-shadow:var(--shadow)}
+.project-visual{height:117px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:var(--panel-soft)}
+.project-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(147,118,199,.13),transparent 60%)}
+.project-visual::after{content:"";position:absolute;right:-10%;top:-20%;width:65%;height:170%;background:radial-gradient(circle,transparent 23%,rgba(118,96,153,.18) 25%,transparent 27%);background-size:19px 19px;transform:rotate(-9deg);opacity:.8}
+.project-visual .project-number{position:absolute;left:22px;top:16px;font:350 53px/.94 var(--display);letter-spacing:-.055em;color:var(--accent);z-index:1;opacity:.85}
+.project:nth-child(2) .project-visual::after{right:5%;background:repeating-linear-gradient(90deg,transparent 0 19px,rgba(118,96,153,.20) 20px 21px);transform:rotate(23deg)}
+.project:nth-child(3) .project-visual::after{background:repeating-radial-gradient(circle at 70% 30%,transparent 0 10px,rgba(118,96,153,.22) 11px 12px,transparent 13px 24px);transform:none}
+.project-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.project-kind{font-size:10px;font-weight:550;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 11px}
+.project h3{margin:0 0 11px;font:500 23px/1.32 var(--display);letter-spacing:-.045em}
+.project-body>p:not(.project-kind){font-size:13.5px;line-height:1.7;color:var(--secondary);margin:0}
+.project-foot{font-size:11px;font-weight:550;color:var(--text);border-top:1px solid var(--line);padding-top:14px;margin-top:auto;padding-bottom:2px}
+/* Research/publication */
+.publication{border:1px solid var(--line);background:var(--panel);display:grid;grid-template-columns:minmax(0,1fr) 140px;gap:20px;padding:38px 42px}
+.pub-meta{font-size:11px;font-weight:550;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.publication h3{font:400 clamp(25px,3.2vw,39px)/1.3 var(--display);letter-spacing:-.056em;max-width:880px;margin:16px 0 15px}
+.publication p{font-size:13.5px;line-height:1.8;color:var(--secondary);max-width:740px;margin:0 0 20px}
+.text-link{font-size:12px;font-weight:550;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+.pub-icon{border:1px solid var(--line);width:80px;height:80px;display:grid;place-items:center;justify-self:end;font:400 42px var(--display);color:var(--accent)}
+/* Education + tools */
+.credentials{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.mini-title{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:550;margin:0 0 16px}
+.edu-item{padding:16px 0;border-top:1px solid var(--line)}
+.edu-item b{font-size:14px;font-weight:550;display:block;line-height:1.5}
+.edu-item span{font-size:12px;color:var(--secondary);line-height:1.65;display:block;margin-top:4px}
+.skill-rows{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+.skill-row{padding:16px 0;border-top:1px solid var(--line)}
+.skill-row b{display:block;font-size:13px;font-weight:550;margin-bottom:4px}
+.skill-row span{color:var(--secondary);font-size:12px;line-height:1.75;display:block}
+/* Personal details and contact */
+.outside-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr);gap:clamp(35px,6vw,100px)}
+.outside-lede{font:400 clamp(26px,3.2vw,40px)/1.28 var(--display);letter-spacing:-.056em;margin:0 0 17px}
+.outside-layout p:not(.outside-lede){color:var(--secondary);font-size:14px;line-height:1.9;margin:0}
+.outside-items{border-top:1px solid var(--line)}
+.outside-item{border-bottom:1px solid var(--line);display:grid;grid-template-columns:30px 1fr;gap:14px;padding:16px 0;align-items:start}
+.outside-item span:first-child{color:var(--accent);font-size:17px}
+.outside-item b{font-size:13.5px;font-weight:550;display:block}.outside-item p{font-size:12px!important;margin-top:3px!important}
+.contact{margin:116px 0 26px;padding:64px clamp(28px,5.6vw,76px);background:var(--inverse);color:var(--inverse-ink);scroll-margin-top:94px}
+.contact-top{font-size:11px;letter-spacing:.09em;font-weight:550;text-transform:uppercase;opacity:.6}
+.contact h2{font:400 clamp(40px,5.4vw,74px)/1.16 var(--display);letter-spacing:-.063em;max-width:1030px;margin:21px 0}
+.contact p{font-size:14px;line-height:1.8;max-width:640px;opacity:.73;margin:0 0 26px}
+.contact-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.email-link{font-size:clamp(14px,1.65vw,20px);font-weight:500;text-underline-offset:6px;overflow-wrap:anywhere}
+.contact a:hover{color:var(--accent)}
+.copy{border:1px solid rgba(128,128,128,.6);background:transparent;color:inherit;padding:9px 14px;font:550 11px var(--body);cursor:pointer;min-width:100px}
+.copy:hover{border-color:currentColor}
+.contact-social{display:flex;gap:23px;flex-wrap:wrap;border-top:1px solid rgba(128,128,128,.36);padding-top:23px;margin-top:39px}
+.contact-social a{font-size:12px;font-weight:550;text-decoration:none}
+footer{display:flex;justify-content:space-between;gap:20px;padding:0 0 33px;color:var(--muted);font-size:11px}footer a{text-decoration:none}
+.back-top{position:fixed;bottom:24px;right:24px;z-index:25;width:39px;height:39px;background:var(--panel);border:1px solid var(--line);color:var(--text);font-size:20px;cursor:pointer;opacity:0;transform:translateY(8px);visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+.back-top.visible{opacity:1;transform:none;visibility:visible}
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.js .reveal.is-visible{opacity:1;transform:none}
+@media(max-width:1100px){
+ .wrap{width:min(100% - 66px,1272px)}.nav-links{gap:14px}.nav-links>a{font-size:11.5px}
+ .masthead h1{font-size:clamp(64px,8.1vw,106px)}.hero-visual{min-height:410px}.hero-content{padding:45px}.hero-content h2{font-size:clamp(37px,4.7vw,54px)}
+ .section-head{grid-template-columns:185px 1fr}.section-inner{margin-left:220px}
+}
+@media(max-width:960px){
+ .wrap{width:calc(100% - 44px)}.header-inner{height:68px}.nav-cluster{gap:11px}
+ #menuToggle{display:grid}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:16px 23px 23px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}
+ .site-header.menu-open .nav-links{display:flex}.nav-links>a{padding:12px 2px;border-bottom:1px solid var(--line);font-size:13px}
+ .nav-links .resume-link{border-bottom:1px solid var(--line);padding-bottom:12px}
+ .hero{padding-top:33px}.hero-visual{min-height:375px;grid-template-columns:1fr 245px}.hero-content{padding:36px}.hero-content h2{font-size:clamp(32px,5vw,47px)}.portrait-block{padding:29px 22px 0 0}.portrait-frame{height:290px}
+ .section{padding-top:80px}.section-head{grid-template-columns:145px 1fr;gap:20px}.section-inner{margin-left:165px}.section-head h2{font-size:clamp(34px,5.3vw,55px)}
+ .about-grid{grid-template-columns:1fr;gap:25px}.about-aside{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-left:0;border-top:1px solid var(--line);padding:19px 0 0}.aside-heading{grid-column:1/-1;margin:0}.aside-fact{padding:0;border:0}
+ .projects-grid{grid-template-columns:repeat(2,1fr)}.project:last-child{grid-column:span 2;min-height:0}.credentials{gap:24px}
+}
+@media(max-width:700px){
+ .wrap{width:calc(100% - 32px)}.header-inner{height:65px}.wordmark-role{display:none}.wordmark-name{font-size:14px}.monogram{width:34px;height:34px}
+ .hero{padding-top:29px}.hero-kicker{font-size:9px;margin-bottom:11px}.masthead{padding:17px 0 20px}.masthead h1{font-size:clamp(49px,11vw,78px);letter-spacing:-.061em;line-height:1.10}
+ .hero-subline{padding:12px 0 23px;align-items:start;flex-direction:column;gap:3px}.hero-subline p{font-size:11px}
+ .hero-visual{display:flex;flex-direction:column;min-height:0}.hero-content{padding:35px 27px 22px}.hero-content h2{font-size:clamp(35px,8.5vw,50px);margin:14px 0}.hero-content p{font-size:13px;margin-bottom:20px}.hero-actions{gap:8px}.button{padding:10px 13px;gap:11px;font-size:11px}
+ .portrait-block{height:205px;padding:0 25px 0;justify-content:flex-end}.portrait-frame{width:200px;height:196px;margin-right:7%;border-bottom:0}.photo-placeholder{font-size:127px}.pattern{width:130%;height:100%;right:-20%;top:20%}
+ .hero-foot{flex-direction:column;gap:6px;font-size:11px}
+ .section{padding-top:72px}.section-head{display:flex;flex-direction:column;gap:14px;padding-top:17px;margin-bottom:27px}.section-head h2{font-size:clamp(35px,9vw,52px)}.section-inner{margin-left:0}
+ .about-primary{font-size:17px}.about-aside{grid-template-columns:1fr 1fr}.role-row{grid-template-columns:1fr;gap:9px;padding:23px 0}.role-topline{display:block}.role-badge{display:inline-block;margin-top:10px}.role-company{margin:8px 0 10px}
+ .impact-strip{grid-template-columns:1fr}.impact-strip>div{border-right:0;border-bottom:1px solid var(--line)}.impact-strip>div:last-child{border-bottom:0}.impact-strip b{font-size:27px}
+ .projects-grid{grid-template-columns:1fr;gap:13px}.project{min-height:0}.project:last-child{grid-column:auto}.project-visual{height:95px}.project-body{min-height:245px;padding:21px}.project h3{font-size:23px}
+ .publication{grid-template-columns:1fr;padding:26px 23px}.pub-icon{display:none}.publication h3{font-size:27px}
+ .credentials{grid-template-columns:1fr;gap:37px}.skill-rows{gap:0 17px}.outside-layout{grid-template-columns:1fr;gap:25px}.outside-lede{font-size:30px}
+ .contact{margin-top:80px;padding:42px 25px}.contact h2{font-size:clamp(35px,8.5vw,54px)}.contact-social{gap:17px}
+ footer{flex-wrap:wrap}.back-top{right:16px;bottom:16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+ <div class="wrap header-inner">
+  <a class="wordmark" href="#top" aria-label="Nilabja Ghosh, back to top"><span><span class="wordmark-name">Nilabja Ghosh</span><span class="wordmark-role">Data Scientist</span></span></a>
+  <div class="nav-cluster">
+   <nav class="nav-links" id="primaryNav" aria-label="Main navigation">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#education">Background</a><a href="#beyond">Beyond Work</a><a href="#contact">Contact</a>
+    <a class="resume-link" href="./Nilabja_Ghosh_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé <span aria-hidden="true">↗</span></a>
+   </nav>
+   <button type="button" id="themeToggle" class="icon-button" aria-label="Switch to dark mode" title="Switch theme"></button>
+   <button type="button" id="menuToggle" class="icon-button" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+ </div>
+</header>
+<main id="main" class="wrap">
+ <section class="hero" aria-labelledby="hero-title">
+  <div class="hero-kicker"><span>Portfolio / Introduction</span><span>Kolkata, India &nbsp; · &nbsp; 2026</span></div>
+  <div class="masthead"><h1 id="hero-title"><span>Nilabja Ghosh</span></h1></div>
+  <div class="hero-subline"><p>DATA SCIENTIST &nbsp;·&nbsp; QUANTITATIVE RESEARCH &nbsp;·&nbsp; APPLIED AI</p><p>A curious mind, working with data.</p></div>
+  <div class="hero-visual">
+   <div class="pattern" aria-hidden="true"></div>
+   <div class="hero-content">
+    <span class="overline">Hello, and welcome.</span>
+    <h2>Turning curiosity into meaningful work.</h2>
+    <p>I'm a data scientist with roots in physics and experience spanning financial research, machine learning, and language AI. This is a little about the work I do—and the person behind it.</p>
+    <div class="hero-actions"><a class="button" href="#about">Get to know me <span aria-hidden="true">↗</span></a><a class="button ghost" href="#projects">Projects <span aria-hidden="true">↘</span></a></div>
+   </div>
+   <div class="portrait-block"><div class="portrait-frame"><span class="photo-placeholder" aria-hidden="true">NG</span><img src="profile_photo1_com.png" alt="Portrait of Nilabja Ghosh" onerror="this.style.display='none'"><span class="portrait-label">Based in Kolkata</span></div></div>
+  </div>
+  <div class="hero-foot"><span>Currently working as a Data Science Consultant at EY India.</span><span><a href="https://www.linkedin.com/in/nilabja-ghosh" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> &nbsp;&nbsp; <a href="https://github.com/ghoshnilabja" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></div>
+ </section>
+
+ <section class="section" id="about" aria-labelledby="about-title">
+  <div class="section-head"><span class="section-index">01 / About me</span><h2 id="about-title">A little about me.</h2></div>
+  <div class="section-inner about-grid reveal">
+   <div class="about-copy">
+    <p class="about-primary">I’m Nilabja, a Kolkata-based data scientist who enjoys taking complex, ambiguous problems and finding a useful way forward.</p>
+    <p>My path began with a degree in Physics at St. Xavier’s College, followed by a master's in Big Data Analytics at RKMVERI. Along the way, I developed an interest in natural language processing and research on how AI understands language and bias.</p>
+    <p>I went on to work in quantitative research, exploring options volatility, systematic trading ideas and financial sentiment. Now-a-days, at EY, I develop machine-learning solutions for demand forecasting and business planning.</p>
+    <p>What connects these different chapters is curiosity: asking the right questions, experimenting with ideas, and building things that have a practical purpose.</p>
+   </div>
+   <aside class="about-aside" aria-label="At a glance">
+    <p class="aside-heading">At a glance</p>
+    <div class="aside-fact"><b>Currently</b><span>Data Scientist, EY India</span></div>
+    <div class="aside-fact"><b>Background</b><span>Physics → Data Science → Quantitative Research</span></div>
+    <div class="aside-fact"><b>Interested in</b><span>Machine Learning, Finance, LLMs &amp; Research</span></div>
+   </aside>
+  </div>
+ </section>
+
+ <section class="section" id="experience" aria-labelledby="experience-title">
+  <div class="section-head"><span class="section-index">02 / Experience</span><h2 id="experience-title">The work so far.</h2></div>
+  <div class="section-inner">
+   <p class="section-intro">My career has taken me from financial markets to enterprise machine learning, with research and experimentation as a constant.</p>
+   <div class="experience">
+    <article class="role-row reveal"><div class="role-date">May 2025 — Present<span>Kolkata, India</span></div><div><div class="role-topline"><h3>Consultant, Data Scientist</h3><span class="role-badge">Current</span></div><p class="role-company">EY India · Financial Services Risk Management</p><p>Developing large-scale demand forecasting solutions for a global FMCG client using PySpark and Azure Databricks. My work spans category-level modeling, intermittent demand, hierarchical forecasting and collaborating with demand planners to make forecasts useful in practice.</p><p>Contributed to improvements in forecast accuracy and bias across business categories. Received the <strong>Client Extraordinary</strong> award twice.</p><div class="role-tags"><span>PySpark</span><span>XGBoost</span><span>LightGBM</span><span>TimeGPT</span><span>Azure Databricks</span></div></div></article>
+    <article class="role-row reveal"><div class="role-date">Jul 2023 — Apr 2025<span>Kolkata, India</span></div><div><div class="role-topline"><h3>Quantitative Research Executive</h3></div><p class="role-company">Feedsense AI Pvt. Ltd. · Formerly Vista Intelligence</p><p>Researched options pricing and implied volatility using Black–Scholes and Heston models, and designed systematic trading and hedging approaches. I also explored real-time financial news sentiment using Whisper and language models.</p><div class="role-tags"><span>Quantitative Finance</span><span>Python</span><span>Volatility Modeling</span><span>LLMs</span></div></div></article>
+   </div>
+   <div class="impact-strip reveal" aria-label="Professional highlights">
+    <div><b>2×</b><span>EY Client Extraordinary award recipient</span></div><div><b>5%</b><span>Improvement in forecasting accuracy reported across categories</span></div><div><b>2024</b><span>Published NLP research on stereotypical bias in hate speech</span></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="section-head"><span class="section-index">03 / Selected Projects</span><h2 id="projects-title">Ideas made tangible.</h2></div>
+  <div class="section-inner">
+   <p class="section-intro">A small selection of projects reflecting my interests in language, representation learning and applied deep learning.</p>
+   <div class="projects-grid">
+    <article class="project reveal"><div class="project-visual"><span class="project-number">01</span></div><div class="project-body"><p class="project-kind">NLP · IIT Patna</p><h3>Explaining toxic language</h3><p>Explored stereotypes and target groups in Hindi toxic text using language models, including mBART, and knowledge-driven approaches.</p><div class="project-foot">Language modeling · Bias research</div></div></article>
+    <article class="project reveal"><div class="project-visual"><span class="project-number">02</span></div><div class="project-body"><p class="project-kind">Representation learning</p><h3>Learning with fewer labels</h3><p>Used self-supervised Barlow Twins representations with ResNet-50 for CIFAR-10 image classification using only 10% labeled data.</p><div class="project-foot">65% accuracy · Self-supervised learning</div></div></article>
+    <article class="project reveal"><div class="project-visual"><span class="project-number">03</span></div><div class="project-body"><p class="project-kind">Computer vision · Healthcare</p><h3>Malaria detection with CNNs</h3><p>Compared optimization methods on a blood-smear classification task to understand how different training approaches influence performance.</p><div class="project-foot">96.11% test accuracy · SGD + momentum</div></div></article>
+   </div>
+  </div>
+ </section>
+
+ <section class="section" id="research" aria-labelledby="research-title">
+  <div class="section-head"><span class="section-index">04 / Research</span><h2 id="research-title">Published work.</h2></div>
+  <div class="section-inner publication reveal">
+   <div><span class="pub-meta">Journal article · Natural Language Processing</span><h3>StereoHate: Toward identifying stereotypical bias and target group in hate speech detection</h3><p>My published research explores stereotypical bias in hateful language and ways to identify the communities targeted by it. Published in <em>Natural Language Processing</em>, Cambridge University Press.</p><a class="text-link" href="https://doi.org/10.1017/nlp.2024.29" target="_blank" rel="noopener noreferrer">Read the publication ↗</a></div><span class="pub-icon" aria-hidden="true">↗</span>
+  </div>
+ </section>
+
+ <section class="section" id="education" aria-labelledby="education-title">
+  <div class="section-head"><span class="section-index">05 / Background</span><h2 id="education-title">Education &amp; toolkit.</h2></div>
+  <div class="section-inner credentials reveal">
+   <div><h3 class="mini-title">Education &amp; distinctions</h3><div class="edu-item"><b>M.Sc. Big Data Analytics</b><span>RKMVERI, Belur · 2023</span></div><div class="edu-item"><b>B.Sc. Physics (Honours)</b><span>St. Xavier’s College, Kolkata · 2021</span></div><div class="edu-item"><b>Research experience</b><span>Department of Computer Science &amp; Engineering, IIT Patna · 2022</span></div><div class="edu-item"><b>Certification</b><span>NISM Series XV — Research Analyst</span></div></div>
+   <div><h3 class="mini-title">Technical toolkit</h3><div class="skill-rows"><div class="skill-row"><b>Programming</b><span>Python, SQL, R</span></div><div class="skill-row"><b>Data platforms</b><span>PySpark, Azure Databricks, Pandas</span></div><div class="skill-row"><b>Machine learning</b><span>Scikit-learn, XGBoost, LightGBM, TimeGPT</span></div><div class="skill-row"><b>Applied AI</b><span>PyTorch, Transformers, LangChain, Whisper</span></div><div class="skill-row"><b>Quantitative research</b><span>Black–Scholes, Heston, time-series modeling</span></div><div class="skill-row"><b>Other</b><span>Git, NLP, statistical modeling</span></div></div></div>
+  </div>
+ </section>
+
+ <section class="section" id="beyond" aria-labelledby="beyond-title">
+  <div class="section-head"><span class="section-index">06 / Beyond work</span><h2 id="beyond-title">More than the résumé.</h2></div>
+  <div class="section-inner outside-layout reveal">
+   <div><p class="outside-lede">I'm as comfortable chasing a football as I am chasing an interesting question.</p><p>Outside work, I enjoy football, badminton and table tennis, as well as photography and traveling. I like meeting people with different perspectives and finding time for things that don't involve a screen. If you're putting together a game and need another player, I'm interested.</p></div>
+   <div class="outside-items"><div class="outside-item"><span aria-hidden="true">↗</span><div><b>Sports</b><p>Football, badminton and table tennis</p></div></div><div class="outside-item"><span aria-hidden="true">◎</span><div><b>Photography &amp; travel</b><p>A reason to look closer and explore somewhere new</p></div></div><div class="outside-item"><span aria-hidden="true">✳</span><div><b>A highlight</b><p>Runners-up in the EY All-in Champions League football tournament</p></div></div></div>
+  </div>
+ </section>
+
+ <section class="contact reveal" id="contact" aria-labelledby="contact-title"><div class="contact-top">07 / Contact</div><h2 id="contact-title">Let's start a conversation.</h2><p>Whether it's about data science, research, a potential opportunity, or simply exchanging ideas, I'm always happy to connect.</p><div class="contact-actions"><a class="email-link" href="mailto:nilabjaghosh2001@gmail.com">nilabjaghosh2001@gmail.com</a><button id="copy" class="copy" type="button" aria-live="polite">Copy email</button></div><div class="contact-social"><a href="https://www.linkedin.com/in/nilabja-ghosh" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/ghoshnilabja" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://doi.org/10.1017/nlp.2024.29" target="_blank" rel="noopener noreferrer">Publication ↗</a><a href="./Nilabja_Ghosh_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé (PDF) ↗</a></div></section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Nilabja Ghosh. All rights reserved.</span><a href="#top">Back to top ↑</a></footer>
+<button class="back-top" id="backtop" type="button" aria-label="Back to top">↑</button>
+<script>
+(function(){
+'use strict';
+var root=document.documentElement, themeButton=document.getElementById('themeToggle'),menuButton=document.getElementById('menuToggle'),header=document.querySelector('.site-header'),backtop=document.getElementById('backtop');
+var prefersDark=window.matchMedia('(prefers-color-scheme: dark)');
+var saved=null;try{saved=localStorage.getItem('ng-portfolio-theme')}catch(e){}
+function themeIcon(t){return t==='light'?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>':'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>'}
+function setTheme(t){root.dataset.theme=t;themeButton.innerHTML=themeIcon(t);var label='Switch to '+(t==='light'?'dark':'light')+' mode';themeButton.setAttribute('aria-label',label);themeButton.title=label;document.querySelector('meta[name="theme-color"]').content=t==='light'?'#f8f8f6':'#121315'}
+setTheme(saved==='light'||saved==='dark'?saved:(prefersDark.matches?'dark':'light'));
+themeButton.addEventListener('click',function(){var t=root.dataset.theme==='dark'?'light':'dark';setTheme(t);try{localStorage.setItem('ng-portfolio-theme',t)}catch(e){}});
+menuButton.addEventListener('click',function(){var open=header.classList.toggle('menu-open');menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
+function closeMenu(){header.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation')}
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',closeMenu)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});document.addEventListener('click',function(e){if(!header.contains(e.target))closeMenu()});
+function scrollUpdate(){backtop.classList.toggle('visible',window.scrollY>430)}
+window.addEventListener('scroll',scrollUpdate,{passive:true});scrollUpdate();
+backtop.addEventListener('click',function(){window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+if('IntersectionObserver' in window){
+ var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.06});
+ document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el)});
+ var navLinks=document.querySelectorAll('.nav-links a[href^="#"]');
+ var spy=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id)})}})},{rootMargin:'-18% 0px -72% 0px'});
+ document.querySelectorAll('main section[id]').forEach(function(s){spy.observe(s)});
+}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('is-visible')})}
+var copy=document.getElementById('copy'),email='nilabjaghosh2001@gmail.com';
+function done(){copy.textContent='Copied!';setTimeout(function(){copy.textContent='Copy email'},1900)}
+function fallback(){var t=document.createElement('textarea');t.value=email;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();try{if(document.execCommand('copy'))done();else copy.textContent='Select email above'}catch(e){copy.textContent='Select email above'}t.remove()}
+copy.addEventListener('click',function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(email).then(done,fallback)}else{fallback()}});
+document.getElementById('year').textContent=String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
