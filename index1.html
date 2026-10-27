@@ -204,6 +204,35 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:0 0 33px;colo
 .back-top{position:fixed;bottom:24px;right:24px;z-index:25;width:39px;height:39px;background:var(--panel);border:1px solid var(--line);color:var(--text);font-size:20px;cursor:pointer;opacity:0;transform:translateY(8px);visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
 .back-top.visible{opacity:1;transform:none;visibility:visible}
 .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.js .reveal.is-visible{opacity:1;transform:none}
+.about-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #999;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.2s ease;
+}
+.about-content a:hover {
+    text-decoration-color: currentColor;
+}
+.portrait-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.portrait-frame {
+    position: relative;
+    width: 290px;
+    max-width: 100%;
+    margin: auto;
+}
+.portrait-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
 @media(max-width:1100px){
  .wrap{width:min(100% - 66px,1272px)}.nav-links{gap:14px}.nav-links>a{font-size:11.5px}
  .masthead h1{font-size:clamp(64px,8.1vw,106px)}.hero-visual{min-height:410px}.hero-content{padding:45px}.hero-content h2{font-size:clamp(37px,4.7vw,54px)}
@@ -264,7 +293,7 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:0 0 33px;colo
    <div class="hero-content">
     <span class="overline">Hello, and welcome.</span>
     <h2>Turning curiosity into meaningful work.</h2>
-    <p>I'm a data scientist with roots in physics and experience spanning financial research, machine learning, and language AI. This is a little about the work I do—and the person behind it.</p>
+    <p>I'm a data scientist with roots in physics and a career shaped by machine learning, quantitative finance, and AI research. I enjoy turning complex problems into meaningful solutions, whether through predictive models, financial research, or language AI.</p><p>A glimpse into my work, my journey, and the person behind it.</p>
     <div class="hero-actions"><a class="button" href="#about">Get to know me <span aria-hidden="true">↗</span></a><a class="button ghost" href="#projects">Projects <span aria-hidden="true">↘</span></a></div>
    </div>
    <div class="portrait-block"><div class="portrait-frame"><span class="photo-placeholder" aria-hidden="true">NG</span><img src="profile_photo1_com.png" alt="Portrait of Nilabja Ghosh" onerror="this.style.display='none'"><span class="portrait-label">Based in Kolkata</span></div></div>
@@ -277,7 +306,17 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:0 0 33px;colo
   <div class="section-inner about-grid reveal">
    <div class="about-copy">
     <p class="about-primary">I’m Nilabja, a Kolkata-based data scientist who enjoys taking complex, ambiguous problems and finding a useful way forward.</p>
-    <p>My path began with a degree in Physics at St. Xavier’s College, followed by a master's in Big Data Analytics at RKMVERI. Along the way, I developed an interest in natural language processing and research on how AI understands language and bias.</p>
+    <!-- <p>My path began with a degree in Physics at <a href="https://www.sxccal.edu/" target="_blank" rel="noopener noreferrer"></a>St. Xavier’s College, Kolkata, followed by a master's in Big Data Analytics at RKMVERI. Along the way, I developed an interest in natural language processing and research on how AI understands language and bias.</p> -->
+    
+    <p>
+      My path began with a degree in Physics at
+      <a href="https://www.sxccal.edu/" target="_blank" rel="noopener noreferrer">
+        St. Xavier's College, Kolkata
+      </a>,
+      followed by a master's in Big Data Analytics at
+      <a href="https://rkmvu.ac.in/" target="_blank" rel="noopener noreferrer">RKMVERI</a>. Along the way, I developed an interest in natural language processing and research on how AI understands language and bias.
+    </p>
+
     <p>I went on to work in quantitative research, exploring options volatility, systematic trading ideas and financial sentiment. Now-a-days, at EY, I develop machine-learning solutions for demand forecasting and business planning.</p>
     <p>What connects these different chapters is curiosity: asking the right questions, experimenting with ideas, and building things that have a practical purpose.</p>
    </div>
@@ -296,10 +335,10 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:0 0 33px;colo
    <p class="section-intro">My career has taken me from financial markets to enterprise machine learning, with research and experimentation as a constant.</p>
    <div class="experience">
     <article class="role-row reveal"><div class="role-date">May 2025 — Present<span>Kolkata, India</span></div><div><div class="role-topline"><h3>Consultant, Data Scientist</h3><span class="role-badge">Current</span></div><p class="role-company">EY India · Technology Consulting</p><p>Developing large-scale demand forecasting solutions for a global FMCG client using PySpark and Azure Databricks. My work spans category-level modeling, intermittent demand, hierarchical forecasting and collaborating with demand planners to make forecasts useful in practice.</p><p>Contributed to improvements in forecast accuracy and bias across business categories. Received the <strong>Client Extraordinary</strong> award twice.</p><div class="role-tags"><span>PySpark</span><span>XGBoost</span><span>LightGBM</span><span>TimeGPT</span><span>Azure Databricks</span></div></div></article>
-    <article class="role-row reveal"><div class="role-date">Jul 2023 — Apr 2025<span>Kolkata, India</span></div><div><div class="role-topline"><h3>Quantitative Research Executive</h3></div><p class="role-company">Feedsense AI Pvt. Ltd. · Formerly Vista Intelligence</p><p>Researched options pricing and implied volatility using Black–Scholes and Heston models, and designed systematic trading and hedging approaches. I also explored real-time financial news sentiment using Whisper and language models.</p><div class="role-tags"><span>Quantitative Finance</span><span>Python</span><span>Volatility Modeling</span><span>LLMs</span></div></div></article>
+    <article class="role-row reveal"><div class="role-date">Jul 2023 — Apr 2025<span>Kolkata, India</span></div><div><div class="role-topline"><h3>Quantitative Research Executive</h3></div><p class="role-company">Feedsense AI Pvt. Ltd. (formerly Vista Intelligence)</p><p>Researched options pricing and implied volatility using Black–Scholes and Heston models, and designed systematic trading and hedging approaches. I also explored real-time financial news sentiment using Whisper and language models.</p><div class="role-tags"><span>Quantitative Finance</span><span>Python</span><span>Volatility Modeling</span><span>LLMs</span></div></div></article>
    </div>
    <div class="impact-strip reveal" aria-label="Professional highlights">
-    <div><b>2×</b><span>EY Client Extraordinary award recipient</span></div><div><b>5%</b><span>Improvement in forecasting accuracy reported across categories</span></div><div><b>2024</b><span>Published NLP research on stereotypical bias in hate speech</span></div>
+    <div><b>2×</b><span>EY Client Extraordinary award recipient.</span></div><div><b>5%</b><span>Improvement in forecasting accuracy reported across categories.</span></div><div><b>2024</b><span>Published my summer research on identifying stereotypical bias and targeted groups in hate speech.</span></div>
    </div>
   </div>
  </section>
